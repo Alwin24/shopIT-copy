@@ -42,7 +42,7 @@ const UpdateProfile = ({ history }) => {
             dispatch({ type: UPDATE_PROFILE_RESET })
         }
 
-    }, [dispatch, alert, isUpdated, error, history])
+    }, [dispatch, alert, isUpdated, error, history, user])
 
     const submitHandler = (e) => {
         e.preventDefault()

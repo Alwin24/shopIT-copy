@@ -10,10 +10,12 @@ import { addItemToCart, removeItemFromCart } from '../../actions/cartActions'
 const Cart = ({ history }) => {
 
     const dispatch = useDispatch();
+    const alert = useAlert();
 
     const { cartItems } = useSelector(state => state.cart)
 
     const removeCartItemHandler = (id) => {
+        alert.success('Item removed from cart')
         dispatch(removeItemFromCart(id))
     }
 
