@@ -52,7 +52,7 @@ const Cart = ({ history }) => {
                         <div className="col-12 col-lg-8">
 
                             {cartItems.map(item => (
-                                <Fragment>
+                                <Fragment key={item.product}>
                                     <hr />
 
                                     <div className="cart-item" key={item.product}>

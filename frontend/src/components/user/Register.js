@@ -69,54 +69,54 @@ const Register = ({ history }) => {
     return (
         <Fragment>
             <MetaData title={'Register User'} />
-            <div class="row wrapper">
-                <div class="col-10 col-lg-5">
-                    <form class="shadow-lg" onSubmit={submitHandler} encType='multipart/form-data'>
-                        <h1 class="mb-3">Register</h1>
+            <div className="row wrapper">
+                <div className="col-10 col-lg-5">
+                    <form className="shadow-lg" onSubmit={submitHandler} encType='multipart/form-data'>
+                        <h1 className="mb-3">Register</h1>
 
-                        <div class="form-group">
-                            <label htmlFor="email_field">Name</label>
+                        <div className="form-group">
+                            <label htmlFor="name_field">Name</label>
                             <input
                                 type="name"
                                 id="name_field"
-                                class="form-control"
+                                className="form-control"
                                 name='name'
                                 value={name}
                                 onChange={onChange} />
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label htmlFor="email_field">Email</label>
                             <input
                                 type="email"
-                                id="email_field" class="form-control"
+                                id="email_field" className="form-control"
                                 name='email'
                                 value={email}
                                 onChange={onChange} />
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label htmlFor="password_field">Password</label>
                             <input
-                                type="password" id="password_field" class="form-control" name='password'
+                                type="password" id="password_field" className="form-control" name='password'
                                 value={password}
                                 onChange={onChange} />
                         </div>
 
-                        <div class='form-group'>
+                        <div className='form-group'>
                             <label htmlFor='avatar_upload'>Avatar</label>
-                            <div class='d-flex align-items-center'>
+                            <div className='d-flex align-items-center'>
                                 <div>
-                                    <figure class='avatar mr-3 item-rtl'>
-                                        <img src={avatarPreview} class='rounded-circle' alt='Avatar Preview' />
+                                    <figure className='avatar mr-3 item-rtl'>
+                                        <img src={avatarPreview} className='rounded-circle' alt='Avatar Preview' />
                                     </figure>
                                 </div>
-                                <div class='custom-file'>
+                                <div className='custom-file'>
                                     <input
-                                        type='file' name='avatar' class='custom-file-input' id='customFile'
+                                        type='file' name='avatar' className='custom-file-input' id='customFile'
                                         accept="images/*"
                                         onChange={onChange} />
-                                    <label class='custom-file-label' htmlFor='customFile'>
+                                    <label className='custom-file-label' htmlFor='customFile'>
                                         Choose Avatar
                                     </label>
                                 </div>
@@ -126,7 +126,7 @@ const Register = ({ history }) => {
                         <button
                             id="register_button"
                             type="submit"
-                            class="btn btn-block py-3"
+                            className="btn btn-block py-3"
                             disabled={loading ? true : false}
                         >
                             REGISTER
